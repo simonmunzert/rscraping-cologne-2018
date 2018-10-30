@@ -168,16 +168,14 @@ stri_rand_strings(100, 10, pattern = "[washington]")
 
 ## 1. describe the types of strings that conform to the following regular expressions and construct an example that is matched by the regular expression.
 str_extract_all("Phone 150$, PC 690$", "[0-9]+\\$") # example
-str_extract_all("Today is a good day.", "\\b[a-z]{1,4}\\b")
-str_extract_all(c("log.txt", ".txt"), ".*?\\.txt$")
-str_extract_all(c("10/10/2018", "10/10/18"), "\\d{2}/\\d{2}/\\d{2,4}")
-str_extract_all("<b>hello</b>", "<(.+?)>.+?</\\1>")
+str_extract_all("", "\\b[a-z]{1,4}\\b")
+str_extract_all("", ".*?\\.txt$")
+str_extract_all("", "\\d{2}/\\d{2}/\\d{2,4}")
+str_extract_all("", "<(.+?)>.+?</\\1>")
 
 ## 2. consider the mail address  chunkylover53[at]aol[dot]com.
 # a) transform the string to a standard mail format using regular expressions.
 # b) imagine we are trying to extract the digits in the mail address using [:digit:]. explain why this fails and correct the expression.
 email <- "chunkylover53[at]aol[dot]com"
 
-
-str_extract("hello \ world", "\\\\")
 
